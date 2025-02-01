@@ -129,3 +129,9 @@ sudo rm -rf /etc/nginx
 - Hemos instalado y configurado **NGINX en Debian 12** para poder realizar los [Casos Prácticos](Casos-practicos.md)
 
 ---
+
+<p align="center">
+  <img src="/Imagenes/Nginx.png" alt="Descripción de la imagen" width="500"/>
+</p> 
+
+---
