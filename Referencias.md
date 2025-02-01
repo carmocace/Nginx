@@ -1,5 +1,12 @@
+---
 ## **Referencias**  
 
+---
+<p align="center">
+  <img src="/Imagenes/AC.png" alt="Descripción de la imagen" width="200"/>
+</p> 
+
+---
 1. [Instalación y Configuración de Nginx](https://serverspace.io/es/support/help/installing-and-configuring-nginx/)
 
 2. [Escribiendo Texto en Markdown](https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
@@ -25,3 +32,11 @@
 12. [Guía de Markdown para Documentación Técnica](https://experienceleague.adobe.com/es/docs/contributor/contributor-guide/writing-essentials/markdown)
 
 13. [Ayuda para Corrección de Errores y Consultas Especificas](https://chatgpt.com/)
+
+---
+<p align="center">
+  <img src="/Imagenes/AC.png" alt="Descripción de la imagen" width="200"/>
+</p> 
+
+---
+
