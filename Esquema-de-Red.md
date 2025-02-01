@@ -1,6 +1,10 @@
 ---
 # Esquema de Red:
 
+<p align="center">
+  <img src="/Imagenes/NGINX (1).jpg" alt="Descripción de la imagen" width="500"/>
+</p> 
+
 ---
 - Para la realizar la **Práctica** y las **Comprobaciones**, vamos a usar dos **MV's** (**Debian-carmona** y **Debian-cliente**) de **VitualBox** que se conectarán a **Internet** por **Adaptador Puente** (**Bridge**) a través de la **Interfaz Física** del **Anfitrión**, y que se comunicarán entre ellas por **Red Interna** a través de una **Interfaz Paravirtualizada**.
 
@@ -27,6 +31,11 @@ sudo nginx -v
 
 <p align="center">
   <img src="/Imagenes/1.png" alt="Descripción de la imagen" width="300"/>
+</p> 
+
+---
+<p align="center">
+  <img src="/Imagenes/nginx.jpg" alt="Descripción de la imagen" width="500"/>
 </p> 
 
 ---
