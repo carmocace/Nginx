@@ -1,6 +1,10 @@
 ---
 # **Comparativa entre NGINX y Apache**  
 
+<p align="center">
+  <img src="/Imagenes/Ap.png" alt="Descripción de la imagen" width="600"/>
+</p> 
+
 ---
 NGINX y Apache son los dos servidores web más utilizados en el mundo. Aunque ambos cumplen la misma función básica de servir contenido web, presentan diferencias fundamentales en su arquitectura, rendimiento y casos de uso recomendados.  
 
@@ -70,6 +74,10 @@ NGINX sobresale en escenarios donde hay un alto volumen de tráfico, ya que pued
 
 📌 **Conclusión**: Apache ofrece más flexibilidad en hosting compartido, mientras que NGINX es más limpio y eficiente en configuración.  
 
+<p align="center">
+  <img src="/Imagenes/nginx-reverse-proxy-apache.jpg" alt="Descripción de la imagen" width="500"/>
+</p> 
+
 ---
 ## **5. Manejo de Contenido Estático y Dinámico**  
 
@@ -117,7 +125,12 @@ NGINX sobresale en escenarios donde hay un alto volumen de tráfico, ya que pued
 - **Usaremos NGINX si:**  
   - Necesitamoss manejar **altas cantidades de tráfico** con **bajo consumo de recursos**.  
   - Requerimos un **servidor proxy inverso o balanceador de carga**.  
-  - Nuestro sitio web está compuesto principalmente por **contenido estático** y buscamos **máxima velocidad**.  
+  - Nuestro sitio web está compuesto principalmente por **contenido estático** y buscamos **máxima velocidad**.
+
+---
+<p align="center">
+  <img src="/Imagenes/Nginx-vs-Apache.jpg" alt="Descripción de la imagen" width="600"/>
+</p> 
 
 ---
 📌 **NGINX es la mejor opción para rendimiento y escalabilidad, mientras que Apache sigue siendo una opción sólida para hosting compartido y aplicaciones dinámicas.**  
