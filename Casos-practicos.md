@@ -1,4 +1,6 @@
+# **Casos Prácticos**
 
+---
 a) Versión de Nginx instalado.
 
 b) Servicio asociado.
