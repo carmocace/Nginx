@@ -18,34 +18,50 @@
 
 1.	Verificamos el estado del servicio de Nginx utilizando el comando *sudo systemctl status nginx*, y nos indica que está activo:
 
-
+<p align="center">
+  <img src="/Imagenes/2.png" alt="Descripción de la imagen" width="500"/>
+</p> 
 
 - Active: active (running) indica que el servicio está en ejecución.
 - Main PID es el identificador del proceso principal de Nginx.
 
 2.	Para consultar los procesos asociados de **Nginx**, ejecutamos *ps aux | grep nginx*, esto filtrará los procesos en ejecución, y así podremos ver el proceso principal de Nginx (master) y los procesos secundarios (workers).
 
-
+<p align="center">
+  <img src="/Imagenes/5.png" alt="Descripción de la imagen" width="500"/>
+</p> 
 
 3.	Consultar logs del servicio: Nginx genera archivos de log donde podemos observar la actividad del servidor y sus posibles errores. 
-- Log de acceso:
+- Log de acceso:  *cat /var/log/nginx/access.log*
 
-cat /var/log/nginx/access.log
+<p align="center">
+  <img src="/Imagenes/6.png" alt="Descripción de la imagen" width="500"/>
+</p> 
 
-- Log de errores:
-cat /var/log/nginx/error.log
+- Log de errores: *cat /var/log/nginx/error.log*
 
+<p align="center">
+  <img src="/Imagenes/7.png" alt="Descripción de la imagen" width="500"/>
+</p> 
 
 4.	Si queremoss ver qué otros servicios o procesos están interactuando con Nginx, como bases de datos, servicios de cache o servicios de backend, podremos examinar las configuraciones y puertos en uso ejecutando *sudo netstat -tuln | grep 80*.
 Nos mostrará los puertos donde Nginx está escuchando (generalmente en el puerto 80 para HTTP o 443 para HTTPS).
+
+<p align="center">
+  <img src="/Imagenes/8.png" alt="Descripción de la imagen" width="500"/>
+</p> 
 
 ---
 ## **c) Ficheros de configuración.**
 
 . **Los ficheros más importantes son:**
+
 •	Archivo de configuración global: */etc/nginx/nginx.conf* 
+
 •	Archivos específicos de cada sitio web: */etc/nginx/sites-available/* y */etc/nginx/sites-enabled/* 
-•	Archivos de configuración SSL si utilizamos HTTPS: Algunas ubicaciones comunes son: */etc/nginx/ssl/certificado.crt*, */etc/ssl/certs/certificado.crt*, y */etc/nginx/ssl/certificado.pem*
+
+•	Archivos de configuración SSL si utilizamos HTTPS: Algunas ubicaciones comunes son: */etc/nginx/ssl/certificado.crt*, 
+*/etc/ssl/certs/certificado.crt*, y */etc/nginx/ssl/certificado.pem*
 
 
 ---
