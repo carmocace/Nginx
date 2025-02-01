@@ -1,6 +1,11 @@
 ---
 # Instalación de NGINX en Debian 12
 
+<p align="center">
+  <img src="/Imagenes/nginx-and-debian.png" alt="Descripción de la imagen" width="500"/>
+</p> 
+
+
 ---
 En este apartado, explicaremos paso a paso cómo instalar y configurar NGINX en **Debian 12 "Bookworm"**.
 
