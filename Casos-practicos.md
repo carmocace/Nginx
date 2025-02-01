@@ -3,6 +3,10 @@
 ---
 ## **a) Versión de Nginx instalado.**
 
+- Ejecutamos *nginx -v* para saber la versión de Nginx que hemos instalado.
+
+
+
 ---
 ## **b) Servicio asociado.**
 
