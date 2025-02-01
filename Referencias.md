@@ -3,7 +3,7 @@
 
 ---
 <p align="center">
-  <img src="/Imagenes/AC.png" alt="Descripción de la imagen" width="200"/>
+  <img src="/Imagenes/nginx (1).png" alt="Descripción de la imagen" width="100"/>
 </p> 
 
 ---
@@ -35,7 +35,7 @@
 
 ---
 <p align="center">
-  <img src="/Imagenes/AC.png" alt="Descripción de la imagen" width="200"/>
+  <img src="/Imagenes/ng.png" alt="Descripción de la imagen" width="100"/>
 </p> 
 
 ---
