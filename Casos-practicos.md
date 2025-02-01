@@ -5,7 +5,9 @@
 
 - Ejecutamos *nginx -v* para saber la versión de Nginx que hemos instalado.
 
-
+<p align="center">
+  <img src="/Imagenes/1.png" alt="Descripción de la imagen" width="500"/>
+</p> 
 
 ---
 ## **b) Servicio asociado.**
