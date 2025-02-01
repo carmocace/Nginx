@@ -11,7 +11,7 @@ En este apartado, explicaremos paso a paso cómo instalar y configurar NGINX en 
 Antes de instalar cualquier paquete, es recomendable actualizar la lista de paquetes del sistema:
 
 ```bash
-sudo apt update && sudo apt upgrade -y
+sudo apt update && sudo apt full-upgrade
 ```
 
 ---
@@ -64,13 +64,13 @@ sudo ufw allow 'Nginx Full'
 sudo ufw reload
 ```
 
-Para comprobar que las reglas se han aplicado correctamente:
+Para comprobar que las reglas se han aplicado correctamente ejecutaremos:
 
 ```bash
 sudo ufw status
 ```
 
-Si se usa **iptables** en lugar de UFW, los siguientes comandos permiten el tráfico en los puertos 80 (HTTP) y 443 (HTTPS):
+Si usamos **iptables** en lugar de UFW, los siguientes comandos permitirán el tráfico en los puertos 80 (HTTP) y 443 (HTTPS):
 
 ```bash
 sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
@@ -80,59 +80,31 @@ sudo iptables -I INPUT -p tcp --dport 443 -j ACCEPT
 ---
 ## 5. Verificar la instalación en el navegador
 
-Para confirmar que NGINX está funcionando, abre un navegador y accede a:
+Para confirmar que NGINX está funcionando, abrimos el navegador y accedemos a:
 
 ---
 ```
 http://localhost
 ```
 
-Si todo está configurado correctamente, verás la **página de bienvenida de NGINX**.
+Si todo está configurado correctamente, veremos la **página de bienvenida de NGINX**.
 
-También puedes comprobarlo desde la terminal con:
+También podemos comprobarlo desde la terminal con:
 
 ```bash
 curl -I http://localhost
 ```
 
-Si NGINX está corriendo correctamente, devolverá:
+Si NGINX está corriendo correctamente, nos responderá:
 
 ```
 HTTP/1.1 200 OK
 ```
 
 ---
-## 6. Ubicación de los archivos de configuración
 
 ---
-Una vez instalado NGINX, es importante conocer la estructura de archivos:
-
-- Archivo principal de configuración:
-  
-  ```
-  /etc/nginx/nginx.conf
-  ```
-
-- Configuración de sitios disponibles:
-  
-  ```
-  /etc/nginx/sites-available/
-  ```
-
-- Configuración de sitios habilitados (enlazados desde sites-available):
-  
-  ```
-  /etc/nginx/sites-enabled/
-  ```
-
-Para aplicar cambios en la configuración, se debe recargar el servicio:
-
-```bash
-sudo systemctl reload nginx
-```
-
----
-## 7. Desinstalación de NGINX (Opcional)
+## 6. Desinstalación de NGINX (Opcional)
 
 ---
 Si en algún momento deseas eliminar NGINX del sistema:
@@ -149,9 +121,6 @@ sudo rm -rf /etc/nginx
 ```
 
 ---
-## Conclusión
-
----
-Con estos pasos, hemos instalado y configurado **NGINX en Debian 12**. Ahora podemos continuar con su configuración avanzada, como la creación de **Virtual Hosts**, la configuración de **proxy inverso** o el uso de **SSL/TLS** para mejorar la seguridad.
+- Hemos instalado y configurado **NGINX en Debian 12** para poder realizar los [Casos Prácticos](Casos-practicos.md)
 
 ---
