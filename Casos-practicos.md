@@ -6,7 +6,7 @@
 - Ejecutamos *nginx -v* para saber la versión de Nginx que hemos instalado.
 
 <p align="center">
-  <img src="/Imagenes/1.png" alt="Descripción de la imagen" width="500"/>
+  <img src="/Imagenes/1.png" alt="Descripción de la imagen" width="300"/>
 </p> 
 
 ---
@@ -35,7 +35,7 @@
 - Log de acceso:  *cat /var/log/nginx/access.log*
 
 <p align="center">
-  <img src="/Imagenes/6.png" alt="Descripción de la imagen" width="500"/>
+  <img src="/Imagenes/6.png" alt="Descripción de la imagen" width="600"/>
 </p> 
 
 - Log de errores: *cat /var/log/nginx/error.log*
@@ -58,16 +58,36 @@ Nos mostrará los puertos donde Nginx está escuchando (generalmente en el puert
 
 •	Archivo de configuración global: */etc/nginx/nginx.conf* 
 
-•	Archivos específicos de cada sitio web: */etc/nginx/sites-available/* y */etc/nginx/sites-enabled/* 
+<p align="center">
+  <img src="/Imagenes/25.png" alt="Descripción de la imagen" width="500"/>
+</p> 
+
+•	Archivos específicos de cada sitio web: 
+
+*/etc/nginx/sites-available/* 
+
+- En este directorio tendremos los archivos disponibles para publicar. 
+
+*/etc/nginx/sites-enabled/* 
+
+- En este directorio tendremos los archivos que queramos que se publiquen.
 
 •	Archivos de configuración SSL si utilizamos HTTPS: Algunas ubicaciones comunes son: */etc/nginx/ssl/certificado.crt*, 
 */etc/ssl/certs/certificado.crt*, y */etc/nginx/ssl/certificado.pem*
 
+- En estos directorios podremos encontrar los certificados de auentificación que tengamos instalados segun cual sea su formato.
 
 ---
 ## **d) Página web por defecto:**
+
 Modifica la página web que lanza por defecto y personalízala.
 “Bienvenidos a Mi servidor web Tu Nombre:”
+
+- Editamos con **Nano** el archivo */var/www/html/index.html*
+
+<p align="center">
+  <img src="/Imagenes/27.png" alt="Descripción de la imagen" width="600"/>
+</p> 
 
 ---
 ## **e) Virtual Hosting:**
@@ -83,6 +103,8 @@ Los dos sitios web tendrán las siguientes características:
 El nombre de dominio del primero será www.web1.org, su directorio base será /var/www/web1 y contendrá una página llamada index.html, donde sólo se verá una bienvenida a la página web1.
 
 El nombre de dominio del primero será www.web2.org, su directorio base será /var/www/web2 y contendrá una página llamada index.html, donde sólo se verá una bienvenida a la página web2.
+
+
 
 Comprobación: 
 Configura la resolución estática en los clientes y muestra el acceso a cada una de las páginas.
