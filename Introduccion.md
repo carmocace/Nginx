@@ -7,6 +7,10 @@ En la actualidad, la gestión eficiente del tráfico web es un aspecto crucial e
 ---
 ## **¿Qué es NGINX?**  
 
+<p align="center">
+  <img src="/Imagenes/nginx2.jpg" alt="Descripción de la imagen" width="500"/>
+</p> 
+
 ---
 NGINX es un **servidor web** de alto rendimiento, de código abierto y con una arquitectura optimizada para manejar grandes volúmenes de tráfico simultáneo. Fue desarrollado por **Igor Sysoev** en 2004 con el objetivo de superar las limitaciones de rendimiento de los servidores tradicionales. Su diseño se basa en un modelo de procesamiento **asíncrono y orientado a eventos**, lo que permite gestionar múltiples conexiones sin necesidad de crear un nuevo proceso o hilo por cada solicitud, como ocurre en servidores más convencionales como Apache.  
 
@@ -33,23 +37,36 @@ Este documento tiene como propósito explorar las características de NGINX desd
 
 ---
 1. **Instalación de NGINX**  
+
    - Proceso de instalación.  
    - Configuración básica inicial.  
 
 2. **Comparación con Apache**  
+
    - Diferencias en arquitectura y rendimiento.  
    - Consumo de recursos y escalabilidad.  
    - Casos de uso recomendados para cada uno.  
 
-3. **Casos prácticos**  
-   - Configuración de múltiples sitios web en un mismo servidor (**Virtual Hosting**).  
-   - Implementación de NGINX como proxy inverso.  
-   - Configuración de HTTPS y seguridad en el servidor.  
+3. **Esquema de red**  
 
-4. **Esquema de red**  
    - Modelo de integración de NGINX en una infraestructura de servidores.  
-   - Ejemplo de implementación en una red con múltiples clientes y servidores backend.  
+   - Ejemplo de implementación en una red con múltiples clientes y servidores backend.
+   
+4. **Casos prácticos**  
+
+   - Configuración de múltiples sitios web en un mismo servidor (**Virtual Hosting**).  
+   - Autentificación, Autorización y Control de acceso.  
+   - Seguridad.  
+
+ 
 
 ---
 A través de estos apartados, se espera proporcionar un conocimiento detallado de cómo **NGINX puede ser utilizado para optimizar la entrega de contenido y mejorar la eficiencia de los servidores web**.  
 
+---
+
+<p align="center">
+  <img src="/Imagenes/Nginx.png" alt="Descripción de la imagen" width="500"/>
+</p> 
+
+---
