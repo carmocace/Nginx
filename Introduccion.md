@@ -1,6 +1,10 @@
 ---
 # **Introducción a NGINX**  
 
+<p align="center">
+  <img src="/Imagenes/nginxlogo.png" alt="Descripción de la imagen" width="500"/>
+</p> 
+
 ---
 En la actualidad, la gestión eficiente del tráfico web es un aspecto crucial en el desarrollo y mantenimiento de aplicaciones y servicios en línea. A medida que las plataformas digitales crecen, también lo hacen las exigencias en términos de escalabilidad, seguridad y rendimiento. Dentro de este contexto, **NGINX** se ha convertido en una de las tecnologías más utilizadas para servir contenido web de manera rápida y optimizada.
 
