@@ -1,6 +1,10 @@
 ---
 # **Casos Prácticos**
 
+<p align="center">
+  <img src="/Imagenes/NGINX6.jpg" alt="Descripción de la imagen" width="600"/>
+</p> 
+
 ---
 ## **a) Versión de *Nginx* instalado.**
 
@@ -205,9 +209,19 @@ Cliente-red-externa: Accede a www.web1.org/privado **Sí** pide credenciales par
 ---
 ## **i)Seguridad.**
 
+---
+<p align="center">
+  <img src="/Imagenes/NGNIX-SERVER-SSL.png" alt="Descripción de la imagen" width="500"/>
+</p> 
+
 Configura el sitio virtual www.web1.org para que el acceso sea seguro.
 
 #### **Comprobación:** 
 Cliente-red interna o externa: Accede a https://www.web1.org/
+
+---
+<p align="center">
+  <img src="/Imagenes/AC.png" alt="Descripción de la imagen" width="500"/>
+</p> 
 
 ---
