@@ -2,7 +2,7 @@
 # Esquema de Red:
 
 <p align="center">
-  <img src="/Imagenes/NGINX (1).jpg" alt="Descripción de la imagen" width="500"/>
+  <img src="/Imagenes/nginx.jpg" alt="Descripción de la imagen" width="400"/>
 </p> 
 
 ---
@@ -12,12 +12,54 @@
 ## **Debian-carmona**
 
 ---
+- Ejecutamos ***ip a*** para comprobar que nuestras **IP's** son, en la Red Puente **192.168.1.43**, y en la Red Interna **192.168.2.100/24**
+
 ````bash
-sudo nginx -v
+ip a
+````
+<p align="center">
+  <img src="/Imagenes/red-ser-ipa.png" alt="Descripción de la imagen" width="500"/>
+</p> 
+
+### **Configuración Adaptador Puente**
+
+<p align="center">
+  <img src="/Imagenes/red-serv-in1.png" alt="Descripción de la imagen" width="250"/>
+</p> 
+
+- Hacemos Ping a la MV debian-cliente en la Red del Equipo Anfitrión.
+
+````bash
+ping -c 4 192.168.1.37
+````
+<p align="center">
+  <img src="/Imagenes/red-serv-ping3.png" alt="Descripción de la imagen" width="300"/>
+</p> 
+
+### **Configuración Red Interna**
+
+<p align="center">
+  <img src="/Imagenes/red-serv-in2.png" alt="Descripción de la imagen" width="250"/>
+</p> 
+
+-Hacemos Ping a la MV debian-cliente en la Red Interna.
+
+````bash
+ping -c 4 192.168.2.101
 ````
 
 <p align="center">
-  <img src="/Imagenes/1.png" alt="Descripción de la imagen" width="300"/>
+  <img src="/Imagenes/red-serv-ping2.png" alt="Descripción de la imagen" width="300"/>
+</p> 
+
+-Hacemos Ping a Google para comprobar la salida a Internet.
+
+````bash
+ping -c4 8.8.8.8
+````
+
+<p align="center">
+  <img src="/Imagenes/red-serv-ping1.png" alt="Descripción de la imagen" width="300"/>
 </p> 
 
 ---
@@ -26,16 +68,47 @@ sudo nginx -v
 ---
 
 ````bash
-sudo nginx -v
+ip a
 ````
 
 <p align="center">
-  <img src="/Imagenes/1.png" alt="Descripción de la imagen" width="300"/>
+  <img src="/Imagenes/red-cl-ipa.png" alt="Descripción de la imagen" width="500"/>
+</p> 
+
+---
+### **Configuración Adaptador Puente**
+
+<p align="center">
+  <img src="/Imagenes/red-cl-1.png" alt="Descripción de la imagen" width="250"/>
+</p> 
+
+-Hacemos Ping a la MV debian-carmona en la Red del Equipo Anfitrión.
+
+````bash
+ping -c 4 192.168.1.43
+````
+<p align="center">
+  <img src="/Imagenes/red-cl-ping2.png" alt="Descripción de la imagen" width="300"/>
+</p> 
+
+### **Configuración Red Interna**
+
+<p align="center">
+  <img src="/Imagenes/red-cl-2.png" alt="Descripción de la imagen" width="250"/>
+</p> 
+
+-Hacemos Ping a la MV debian-carmona en la Red Interna.
+
+````bash
+ping -c 4 192.168.2.100
+````
+<p align="center">
+  <img src="/Imagenes/red-cl-ipa2.png" alt="Descripción de la imagen" width="300"/>
 </p> 
 
 ---
 <p align="center">
-  <img src="/Imagenes/nginx.jpg" alt="Descripción de la imagen" width="500"/>
+  <img src="/Imagenes/NGINX (1).jpg" alt="Descripción de la imagen" width="400"/>
 </p> 
 
 ---
