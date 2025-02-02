@@ -1,6 +1,7 @@
 ---
 # **Casos Prácticos**
 
+---
 <p align="center">
   <img src="/Imagenes/NGINX6.jpg" alt="Descripción de la imagen" width="600"/>
 </p> 
@@ -8,6 +9,7 @@
 ---
 ## **A) Versión de *Nginx* instalado.**
 
+---
 - Ejecutamos *nginx -v* para saber la versión de Nginx que hemos instalado.
 
 ````bash
@@ -21,6 +23,7 @@ sudo nginx -v
 ---
 ## **B) Servicio asociado.**
 
+---
 - El servicio asociado de ***Nginx*** se refiere a los procesos o componentes que trabajan junto con el servidor web ***Nginx*** para gestionar y optimizar el tráfico web, realizar balanceo de carga, manejo de solicitudes, y asegurar la correcta entrega de contenido.
 
 - Para consultar el servicio asociado de ***Nginx***:
@@ -83,6 +86,7 @@ sudo netstat -tuln | grep 80
 ---
 ## **C) Ficheros de configuración.**
 
+---
 . **Los ficheros más importantes son:**
 
 •	Archivo de configuración global: */etc/nginx/nginx.conf* 
@@ -135,6 +139,7 @@ sudo cd /etc/ssl/certs/ | ls -l
 ---
 ## **D) Página web por defecto:**
 
+---
 Modifica la página web que lanza por defecto y personalízala.
 “Bienvenidos a Mi servidor web Tu Nombre:”
 
@@ -151,6 +156,7 @@ sudo nano /var/www/html/index.html
 ---
 ## **E) Virtual Hosting:**
 
+---
 Queremos que nuestro servidor web ofrezca dos sitios web, teniendo en cuenta lo siguiente:
 
 Cada sitio web tendrá nombres distintos.
@@ -172,6 +178,7 @@ Configura la resolución estática en los clientes y muestra el acceso a cada un
 ---
 ## **F) Autentificación, Autorización y Control de acceso**
 
+---
 www.web1.org se puede acceder desde la red externa y la red interna.
 
 www.web2.org sólo se puede acceder desde la red interna.
@@ -185,6 +192,7 @@ Cliente-red externa: Accede a www.web1.org y NO a www.web2.org
 ---
 ## **G) Autentificación, Autorización y Control de acceso.**
 
+---
 www.web1.org contiene un directorio llamado privado.
 
 Configura una autentificación básica. Sólo pueden acceder **usuarios válidos**.
@@ -196,6 +204,7 @@ Cliente-red interna o externa: Accede a www.web1.org/privado y pide credenciales
 ---
 ## **H) Autentificación, Autorización y Control de acceso.**
 
+---
 www.web1.org contiene un directorio llamado privado.
 
 Desde la red externa pide autorización y desde la red interna **NO**.
@@ -220,12 +229,10 @@ Configura el sitio virtual www.web1.org para que el acceso sea seguro.
 Cliente-red interna o externa: Accede a https://www.web1.org/
 
 ---
-
-- Para realizar este Trabajo hemos buscado información en internet, para su consulta, o para ampliar información, esta disponible en estas [**Direcciones Web**](Referencias.md)
-
----
 <p align="center">
   <img src="/Imagenes/AC.png" alt="Descripción de la imagen" width="500"/>
 </p> 
 
+---
+- Para realizar este Trabajo hemos investigado en internet, para consultar o ampliar la información, la hemos obtenido de las siguientes [**Direcciones Web**](Referencias.md).
 ---
