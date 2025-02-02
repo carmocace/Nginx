@@ -37,7 +37,7 @@ A diferencia de servidores tradicionales como Apache, NGINX ha sido diseñado pa
 ## **Objetivo del documento**  
 
 ---
-Este documento tiene como propósito explorar las características de NGINX desde un punto de vista práctico y técnico. Para ello, se abordarán los siguientes apartados:  
+Este documento tiene como propósito explorar las características de NGINX desde un punto de vista práctico y técnico. Para ello, abordaremos los siguientes apartados:  
 
 ---
 1. **Instalación de NGINX**  
