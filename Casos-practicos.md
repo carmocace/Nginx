@@ -220,6 +220,10 @@ Configura el sitio virtual www.web1.org para que el acceso sea seguro.
 Cliente-red interna o externa: Accede a https://www.web1.org/
 
 ---
+
+- Para realizar este Trabajo hemos buscado información en internet, para su consulta, o para ampliar información, esta disponible en estas [**Direcciones Web**](Referencias.md)
+
+---
 <p align="center">
   <img src="/Imagenes/AC.png" alt="Descripción de la imagen" width="500"/>
 </p> 
