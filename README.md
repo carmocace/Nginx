@@ -1,4 +1,13 @@
-# **Nginx**
+---
+<p align="center">
+José Manuel Carmona Cáceres
+</p>
+<p align="center">
+2º ASIR - Nocturno Curso 24/25
+</p>
+<p align="center"> 
+IES Rodrigo Caro - Coria del Río - Sevilla.
+</p> 
 
 ---
 <p align="center">
