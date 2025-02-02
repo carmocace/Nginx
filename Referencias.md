@@ -35,6 +35,17 @@
 
 ---
 <p align="center">
+José Manuel Carmona Cáceres
+</p>
+<p align="center">
+2º ASIR - Nocturno Curso 24/25
+</p>
+<p align="center"> 
+IES Rodrigo Caro - Coria del Rio - Sevilla.
+</p> 
+
+---
+<p align="center">
   <img src="/Imagenes/ng.png" alt="Descripción de la imagen" width="100"/>
 </p> 
 
