@@ -35,3 +35,7 @@ IES Rodrigo Caro - Coria del Río - Sevilla.
 </p> 
 
 ---
+
+-En este Trabajo aprenderemos el uso y configuración del Servidor Web **NGINX**. Para ello haremos una pequeña [**Introducción**](Introduccion.md) para conocer esta Aplicación.
+
+---
