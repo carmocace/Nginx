@@ -26,14 +26,22 @@ sudo apt update && sudo apt full-upgrade
 Debian 12 incluye NGINX en sus repositorios oficiales, por lo que podemos instalarlo fácilmente con:
 
 ```bash
-sudo apt install nginx -y
+sudo apt install nginx
 ```
+
+<p align="center">
+  <img src="/Imagenes/20.png" alt="Descripción de la imagen" width="500"/>
+</p> 
 
 Una vez finalizada la instalación, podemos verificar la versión instalada con:
 
 ```bash
 nginx -v
 ```
+
+<p align="center">
+  <img src="/Imagenes/1.png" alt="Descripción de la imagen" width="300"/>
+</p> 
 
 ---
 
