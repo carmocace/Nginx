@@ -66,6 +66,7 @@ ping -c4 8.8.8.8
 ## **debian-cliente**
 
 ---
+- Ejecutamos ***ip a*** para comprobar que nuestras **IP's** son, en la Red Puente **192.168.1.37**, y en la Red Interna **192.168.2.101/24**
 
 ````bash
 ip a
