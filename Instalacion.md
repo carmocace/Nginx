@@ -152,10 +152,7 @@ sudo rm -rf /etc/nginx
 ---
 - Hemos instalado y configurado **NGINX en Debian 12** para poder realizar los [Casos Prácticos](Casos-practicos.md)
 
-- Ahora tendremos que [Conectar las **MV's**](Esquema-de-Red.md) para crear el entorno de trabajo.
-
 ---
-
 <p align="center">
   <img src="/Imagenes/Nginx.png" alt="Descripción de la imagen" width="500"/>
 </p> 
