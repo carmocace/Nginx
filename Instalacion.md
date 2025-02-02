@@ -133,10 +133,10 @@ Si **NGINX** está corriendo correctamente, nos responderá: **HTTP/1.1 200 OK**
 ---
 
 ---
-## 6. Desinstalación de NGINX (Opcional)
+## 6. Desinstalación de NGINX una vez terminada la práctica (Opcional):
 
 ---
-Si en algún momento deseas eliminar **NGINX** del sistema:
+Si en algún momento queremos eliminar **NGINX** del sistema:
 
 ```bash
 sudo apt remove --purge nginx -y
