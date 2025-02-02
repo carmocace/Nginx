@@ -53,8 +53,8 @@ Este documento tiene como propósito explorar las características de NGINX desd
 
 3. **Esquema de red**  
 
-   - Modelo de integración de NGINX en una infraestructura de servidores.  
-   - Ejemplo de implementación en una red con múltiples clientes y servidores backend.
+   - Máquina Virtual **debian-carmona** haciendo de Servidor Web.
+   - Máquina Virtual **debian-cliente** conectada por Red Interna.
    
 4. **Casos prácticos**  
 
