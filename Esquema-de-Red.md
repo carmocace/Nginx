@@ -104,7 +104,10 @@ ping -c 4 192.168.2.100
 ````
 <p align="center">
   <img src="/Imagenes/red-cl-ipa2.png" alt="Descripción de la imagen" width="300"/>
-</p> 
+</p>
+
+---
+- Una vez configurada a red, procedemos a la [**Instalación y Configuración de Nginx**](Instalacion.md)
 
 ---
 <p align="center">
