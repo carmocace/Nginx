@@ -6,7 +6,7 @@
 </p> 
 
 ---
-## **a) Versión de *Nginx* instalado.**
+## **A) Versión de *Nginx* instalado.**
 
 - Ejecutamos *nginx -v* para saber la versión de Nginx que hemos instalado.
 
@@ -19,7 +19,7 @@ sudo nginx -v
 </p> 
 
 ---
-## **b) Servicio asociado.**
+## **B) Servicio asociado.**
 
 - El servicio asociado de ***Nginx*** se refiere a los procesos o componentes que trabajan junto con el servidor web ***Nginx*** para gestionar y optimizar el tráfico web, realizar balanceo de carga, manejo de solicitudes, y asegurar la correcta entrega de contenido.
 
@@ -81,7 +81,7 @@ sudo netstat -tuln | grep 80
 </p> 
 
 ---
-## **c) Ficheros de configuración.**
+## **C) Ficheros de configuración.**
 
 . **Los ficheros más importantes son:**
 
@@ -133,7 +133,7 @@ sudo cd /etc/ssl/certs/ | ls -l
 - En estos directorios podremos encontrar los **Certificados de Autentificación** que tengamos instalados, segun cual sea su formato.
 
 ---
-## **d) Página web por defecto:**
+## **D) Página web por defecto:**
 
 Modifica la página web que lanza por defecto y personalízala.
 “Bienvenidos a Mi servidor web Tu Nombre:”
@@ -149,7 +149,7 @@ sudo nano /var/www/html/index.html
 </p> 
 
 ---
-## **e) Virtual Hosting:**
+## **E) Virtual Hosting:**
 
 Queremos que nuestro servidor web ofrezca dos sitios web, teniendo en cuenta lo siguiente:
 
@@ -170,7 +170,7 @@ El nombre de dominio del primero será www.web2.org, su directorio base será /v
 Configura la resolución estática en los clientes y muestra el acceso a cada una de las páginas.
 
 ---
-## **f) Autentificación, Autorización y Control de acceso**
+## **F) Autentificación, Autorización y Control de acceso**
 
 www.web1.org se puede acceder desde la red externa y la red interna.
 
@@ -183,7 +183,7 @@ Cliente-red interna: Accede a www.web1.org y www.web2.org
 Cliente-red externa: Accede a www.web1.org y NO a www.web2.org
 
 ---
-## **g) Autentificación, Autorización y Control de acceso.**
+## **G) Autentificación, Autorización y Control de acceso.**
 
 www.web1.org contiene un directorio llamado privado.
 
@@ -194,7 +194,7 @@ Configura una autentificación básica. Sólo pueden acceder **usuarios válidos
 Cliente-red interna o externa: Accede a www.web1.org/privado y pide credenciales para entrar.
 
 ---
-## **h) Autentificación, Autorización y Control de acceso.**
+## **H) Autentificación, Autorización y Control de acceso.**
 
 www.web1.org contiene un directorio llamado privado.
 
@@ -207,7 +207,7 @@ Cliente-red interna: Accede a www.web1.org/privado **NO** pide credenciales para
 Cliente-red-externa: Accede a www.web1.org/privado **Sí** pide credenciales para entrar.
 
 ---
-## **i)Seguridad.**
+## **I) Seguridad.**
 
 ---
 <p align="center">
