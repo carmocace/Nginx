@@ -48,17 +48,20 @@ nginx -v
 ## 3. Verificar el estado del servicio
 
 ---
-Después de la instalación, NGINX se iniciará automáticamente. Para comprobar que está corriendo correctamente, usamos:
+Después de la instalación, NGINX se iniciará automáticamente. Si el servicio no está activo, lo podemos iniciar manualmente con:
+
+```bash
+sudo systemctl start nginx
+``` 
+Para comprobar que está corriendo correctamente, usamos:
 
 ```bash
 sudo systemctl status nginx
 ```
 
-Si el servicio no está activo, lo podemos iniciar manualmente con:
-
-```bash
-sudo systemctl start nginx
-```
+<p align="center">
+  <img src="/Imagenes/2.png" alt="Descripción de la imagen" width="500"/>
+</p> 
 
 Para asegurarnos de que NGINX se inicie automáticamente en cada reinicio del sistema:
 
@@ -66,8 +69,12 @@ Para asegurarnos de que NGINX se inicie automáticamente en cada reinicio del si
 sudo systemctl enable nginx
 ```
 
+<p align="center">
+  <img src="/Imagenes/enable.png" alt="Descripción de la imagen" width="500"/>
+</p> 
+
 ---
-## 4. Configurar el firewall (si está activado)
+## 4. Configurar el firewall.
 
 ---
 Si el firewall UFW está activo en el sistema, debemos permitir el tráfico HTTP y HTTPS:
@@ -83,12 +90,17 @@ Para comprobar que las reglas se han aplicado correctamente ejecutaremos:
 sudo ufw status
 ```
 
-Si usamos **iptables** en lugar de UFW, los siguientes comandos permitirán el tráfico en los puertos 80 (HTTP) y 443 (HTTPS):
+Nosotros usamos **iptables** en lugar de UFW, los siguientes comandos nos permitirán el tráfico en los puertos **80 (HTTP)** y **443 (HTTPS)**:
 
 ```bash
 sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
 sudo iptables -I INPUT -p tcp --dport 443 -j ACCEPT
 ```
+
+<p align="center">
+  <img src="/Imagenes/iptables.png" alt="Descripción de la imagen" width="500"/>
+</p> 
+
 
 ---
 ## 5. Verificar la instalación en el navegador
@@ -100,19 +112,23 @@ Para confirmar que NGINX está funcionando, abrimos el navegador y accedemos a:
 http://localhost
 ```
 
-Si todo está configurado correctamente, veremos la **página de bienvenida de NGINX**.
+Si todo está configurado correctamente, veremos la **Página de Inicio de NGINX**.
+
+<p align="center">
+  <img src="/Imagenes/local.png" alt="Descripción de la imagen" width="500"/>
+</p> 
 
 También podemos comprobarlo desde la terminal con:
 
 ```bash
-curl -I http://localhost
+sudo curl -I http://localhost
 ```
 
-Si NGINX está corriendo correctamente, nos responderá:
+Si **NGINX** está corriendo correctamente, nos responderá: **HTTP/1.1 200 OK**
 
-```
-HTTP/1.1 200 OK
-```
+<p align="center">
+  <img src="/Imagenes/curl.png" alt="Descripción de la imagen" width="500"/>
+</p> 
 
 ---
 
@@ -120,7 +136,7 @@ HTTP/1.1 200 OK
 ## 6. Desinstalación de NGINX (Opcional)
 
 ---
-Si en algún momento deseas eliminar NGINX del sistema:
+Si en algún momento deseas eliminar **NGINX** del sistema:
 
 ```bash
 sudo apt remove --purge nginx -y
@@ -135,6 +151,8 @@ sudo rm -rf /etc/nginx
 
 ---
 - Hemos instalado y configurado **NGINX en Debian 12** para poder realizar los [Casos Prácticos](Casos-practicos.md)
+
+- Ahora tendremos que [Conectar las **MV's**](Esquema-de-Red.md) para crear el entorno de trabajo.
 
 ---
 
