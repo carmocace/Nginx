@@ -65,10 +65,9 @@ Este documento tiene como propósito explorar las características de NGINX desd
  
 
 ---
-A través de estos apartados, se espera proporcionar un conocimiento detallado de cómo **NGINX puede ser utilizado para optimizar la entrega de contenido y mejorar la eficiencia de los servidores web**. Empezaremos con la [**Configuración de la Red**](Esquema-de-Red.md) de las **MV's**.
+A través de estos apartados, se espera proporcionar un conocimiento detallado de cómo **NGINX puede ser utilizado para optimizar la entrega de contenido y mejorar la eficiencia de los servidores web**. Empezaremos [Conectando las **MV's**](Esquema-de-Red.md) para crear el entorno de trabajo.
 
 ---
-
 <p align="center">
   <img src="/Imagenes/Nginx.png" alt="Descripción de la imagen" width="500"/>
 </p> 
