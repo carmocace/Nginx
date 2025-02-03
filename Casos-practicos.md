@@ -248,8 +248,6 @@ sudo systemctl reload nginx
 Configura la resolución estática en los clientes y muestra el acceso a cada una de las páginas.
 
 - Editamos en **debian-cliente** el archivo /etc/hosts y le añadimos las Entradas.
-**192.168.2.100 www.web1.org**
-**192.168.2.100 www.web2.org**
 
  ````bash
 sudo nano /etc/hosts
