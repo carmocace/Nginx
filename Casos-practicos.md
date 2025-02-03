@@ -105,23 +105,23 @@ sudo nano /etc/nginx/nginx.conf
 sudo cd /etc/nginx/ | ls -l
 ````
 <p align="center">
-  <img src="/Imagenes/24b.png" alt="Descripción de la imagen" width="500"/>
+  <img src="/Imagenes/24b.png" alt="Descripción de la imagen" width="300"/>
 </p> 
 
 */etc/nginx/sites-available/* 
 
-- En este directorio tendremos los archivos disponibles para publicar.
+- En este directorio tendremos los archivos disponibles para publicar. Contiene un archivo **default** (por defecto) que podremos editar con **Nano**.
 
 <p align="center">
-  <img src="/Imagenes/23.png" alt="Descripción de la imagen" width="500"/>
+  <img src="/Imagenes/23.png" alt="Descripción de la imagen" width="400"/>
 </p> 
 
 */etc/nginx/sites-enabled/* 
 
-- En este directorio tendremos los archivos que queramos que se publiquen.
+- En este directorio tendremos los archivos que queramos que se publiquen. También contiene un archivo **default** (por defecto), que podremos editar con **Nano**.
 
 <p align="center">
-  <img src="/Imagenes/sites-enabled.png" alt="Descripción de la imagen" width="500"/>
+  <img src="/Imagenes/sites-enabled.png" alt="Descripción de la imagen" width="400"/>
 </p> 
 
 •	Archivos de configuración **SSL** si utilizamos **HTTPS**: Algunas ubicaciones comunes son: 
@@ -156,8 +156,13 @@ sudo nano /var/www/html/index.html
 ````
 
 <p align="center">
-  <img src="/Imagenes/27.png" alt="Descripción de la imagen" width="600"/>
+  <img src="/Imagenes/27.png" alt="Descripción de la imagen" width="500"/>
 </p> 
+
+<p align="center">
+  <img src="/Imagenes/199.png" alt="Descripción de la imagen" width="500"/>
+</p> 
+
 
 ---
 ## **E) Virtual Hosting:**
@@ -175,14 +180,98 @@ El nombre de dominio del primero será www.web1.org, su directorio base será /v
 
 El nombre de dominio del primero será www.web2.org, su directorio base será /var/www/web2 y contendrá una página llamada index.html, donde sólo se verá una bienvenida a la página web2.
 
+### 1. Creamos los directorios y las páginas web:
 
+````bash
+sudo mkdir -p /var/www/web1 /var/www/web2
+sudo chown -R www-data:www-data /var/www/web1
+sudo chown -R www-data:www-data /var/www/web2
+sudo chmod -R 755 /var/www/
+````
+
+<p align="center">
+  <img src="/Imagenes/105.png" alt="Descripción de la imagen" width="500"/>
+</p> 
+
+````bash
+echo "<h1>Bienvenido a Web1</h1>" | sudo tee /var/www/web1/index.html
+echo "<h1>Bienvenido a Web2</h1>" | sudo tee /var/www/web2/index.html
+````
+
+<p align="center">
+  <img src="/Imagenes/200.png" alt="Descripción de la imagen" width="500"/>
+</p> 
+
+### 2. Configuramos los archivos de sitio en /etc/nginx/sites-available/:
+
+- **Web1.org**
+
+````bash
+sudo nano /etc/nginx/sites-available/web1.conf
+````
+<p align="center">
+  <img src="/Imagenes/201.png" alt="Descripción de la imagen" width="500"/>
+</p> 
+
+- **Web2.org**
+
+````bash
+sudo nano /etc/nginx/sites-available/web2.conf
+````
+<p align="center">
+  <img src="/Imagenes/202.png" alt="Descripción de la imagen" width="500"/>
+</p> 
+
+### 3.- Habilitamos los Sitios:
+
+````bash
+sudo ln -s /etc/nginx/sites-available/web1.conf /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/web2.conf /etc/nginx/sites-enabled/
+
+````
+<p align="center">
+  <img src="/Imagenes/203.png" alt="Descripción de la imagen" width="500"/>
+</p> 
+
+- **Recargamos Nginx**:
+
+````bash
+sudo systemctl reload nginx
+````
+
+<p align="center">
+  <img src="/Imagenes/204.png" alt="Descripción de la imagen" width="500"/>
+</p> 
 
 #### **Comprobación:** 
 
 Configura la resolución estática en los clientes y muestra el acceso a cada una de las páginas.
 
+- Editamos en **debian-cliente** el archivo /etc/hosts y le añadimos las Entradas.
+**192.168.2.100 www.web1.org**
+**192.168.2.100 www.web2.org**
+
+ ````bash
+sudo nano /etc/hosts
+````
+
+<p align="center">
+  <img src="/Imagenes/205.png" alt="Descripción de la imagen" width="500"/>
+</p>
+
+•	Abrimos un navegador y accedemos a **http://www.web1.org** y a **http://www.web2.org**.
+
+<p align="center">
+  <img src="/Imagenes/206.png" alt="Descripción de la imagen" width="500"/>
+</p>
+
+<p align="center">
+  <img src="/Imagenes/207.png" alt="Descripción de la imagen" width="500"/>
+</p>
+
 ---
 ## **F) Autentificación, Autorización y Control de acceso**
+
 
 ---
 www.web1.org se puede acceder desde la red externa y la red interna.
