@@ -333,9 +333,71 @@ www.web1.org contiene un directorio llamado privado.
 
 Configura una autentificación básica. Sólo pueden acceder **usuarios válidos**.
 
+- **Autentificación básica**
+
+1. Creamos un archivo .htpasswd para almacenar credenciales:
+
+````bash
+sudo sh -c "echo -n 'usuario:' >> /etc/nginx/.htpasswd"
+sudo sh -c "openssl passwd -apr1 >> /etc/nginx/.htpasswd"
+````
+
+<p align="center">
+  <img src="/Imagenes/225.png" alt="Descripción de la imagen" width="500"/>
+</p>
+
+- Comprobamos que se ha creado correctamente:
+
+````bash
+sudo cat /etc/nginx/.htpasswd
+````
+
+<p align="center">
+  <img src="/Imagenes/226.png" alt="Descripción de la imagen" width="500"/>
+</p>
+
+2. Configuramos la autenticación básica para proteger el directorio **/privado**:
+
+````bash
+sudo nano /etc/nginx/sites-available/web1.conf
+````
+
+<p align="center">
+  <img src="/Imagenes/227.png" alt="Descripción de la imagen" width="500"/>
+</p>
+
+````bash
+sudo systemctl reload nginx
+````
+
+<p align="center">
+  <img src="/Imagenes/228.png" alt="Descripción de la imagen" width="500"/>
+</p>
+
+3. Creamos el directorio **/privado**:
+
+- Dentro crearemos un archivo **index.html**
+
+````bash
+sudo mkdir -p /var/www/web1/privado
+sudo nano /var/www/web1/privado/index.html
+````
+
+<p align="center">
+  <img src="/Imagenes/229.png" alt="Descripción de la imagen" width="500"/>
+</p>
+
+<p align="center">
+  <img src="/Imagenes/235.png" alt="Descripción de la imagen" width="500"/>
+</p>
+
 #### **Comprobación:** 
 
 Cliente-red interna o externa: Accede a www.web1.org/privado y pide credenciales para entrar.
+
+<p align="center">
+  <img src="/Imagenes/231.png" alt="Descripción de la imagen" width="500"/>
+</p>
 
 ---
 ## **H) Autentificación, Autorización y Control de acceso.**
