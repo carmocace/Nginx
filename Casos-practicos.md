@@ -270,17 +270,60 @@ sudo nano /etc/hosts
 ---
 ## **F) Autentificación, Autorización y Control de acceso**
 
-
 ---
 www.web1.org se puede acceder desde la red externa y la red interna.
 
 www.web2.org sólo se puede acceder desde la red interna.
 
+1.	**Acceso desde redes externas e internas para www.web1.org:**
+- Editamos el archivo de configuración de web1.conf y nos aseguramos de que no haya restricciones.
+
+ ````bash
+sudo nano /etc/nginx/sites-available/web1.conf
+````
+
+<p align="center">
+  <img src="/Imagenes/210.png" alt="Descripción de la imagen" width="500"/>
+</p>
+
+2. **Acceso solo desde red interna para www.web2.org:**
+- Editamos el archivo de configuración de web2.conf y agregamos una restricción basada en IP:
+
+````bash
+sudo nano /etc/nginx/sites-available/web1.conf
+````
+
+<p align="center">
+  <img src="/Imagenes/211.png" alt="Descripción de la imagen" width="500"/>
+</p>
+
+3. **Recargamos Nginx:**
+
+````bash
+sudo systemctl reload nginx
+````
+
 #### **Comprobación:** 
 
 Cliente-red interna: Accede a www.web1.org y www.web2.org
 
+<p align="center">
+  <img src="/Imagenes/220.png" alt="Descripción de la imagen" width="500"/>
+</p>
+
+<p align="center">
+  <img src="/Imagenes/221.png" alt="Descripción de la imagen" width="500"/>
+</p>
+
 Cliente-red externa: Accede a www.web1.org y NO a www.web2.org
+
+<p align="center">
+  <img src="/Imagenes/222.png" alt="Descripción de la imagen" width="500"/>
+</p>
+
+<p align="center">
+  <img src="/Imagenes/223.png" alt="Descripción de la imagen" width="500"/>
+</p>
 
 ---
 ## **G) Autentificación, Autorización y Control de acceso.**
