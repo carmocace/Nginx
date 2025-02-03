@@ -363,7 +363,7 @@ sudo nano /etc/nginx/sites-available/web1.conf
 ````
 
 <p align="center">
-  <img src="/Imagenes/227.png" alt="Descripción de la imagen" width="500"/>
+  <img src="/Imagenes/235.png" alt="Descripción de la imagen" width="500"/>
 </p>
 
 ````bash
@@ -388,7 +388,7 @@ sudo nano /var/www/web1/privado/index.html
 </p>
 
 <p align="center">
-  <img src="/Imagenes/235.png" alt="Descripción de la imagen" width="500"/>
+  <img src="/Imagenes/230.png" alt="Descripción de la imagen" width="500"/>
 </p>
 
 #### **Comprobación:** 
