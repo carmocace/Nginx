@@ -101,22 +101,28 @@ sudo nano /etc/nginx/nginx.conf
 
 •	Archivos específicos de cada sitio web: 
 
+````bash
+sudo cd /etc/nginx/ | ls -l
+````
+<p align="center">
+  <img src="/Imagenes/24b.png" alt="Descripción de la imagen" width="500"/>
+</p> 
+
 */etc/nginx/sites-available/* 
 
-````bash
-sudo cd /etc/nginx/sites-available/ | ls -l
-````
+- En este directorio tendremos los archivos disponibles para publicar.
 
-- En este directorio tendremos los archivos disponibles para publicar. 
+<p align="center">
+  <img src="/Imagenes/23.png" alt="Descripción de la imagen" width="500"/>
+</p> 
 
 */etc/nginx/sites-enabled/* 
 
-````bash
-sudo cd /etc/nginx/sites-enabled/ | ls -l
-````
-
 - En este directorio tendremos los archivos que queramos que se publiquen.
 
+<p align="center">
+  <img src="/Imagenes/sites-enabled.png" alt="Descripción de la imagen" width="500"/>
+</p> 
 
 •	Archivos de configuración **SSL** si utilizamos **HTTPS**: Algunas ubicaciones comunes son: 
 
