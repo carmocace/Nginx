@@ -290,7 +290,7 @@ sudo nano /etc/nginx/sites-available/web1.conf
 - Editamos el archivo de configuración de web2.conf y agregamos una restricción basada en IP:
 
 ````bash
-sudo nano /etc/nginx/sites-available/web1.conf
+sudo nano /etc/nginx/sites-available/web2.conf
 ````
 
 <p align="center">
@@ -427,7 +427,7 @@ Cliente-red-externa: Accede a www.web1.org/privado **Sí** pide credenciales par
 
 ---
 <p align="center">
-  <img src="/Imagenes/NGNIX-SERVER-SSL.png" alt="Descripción de la imagen" width="400"/>
+  <img src="/Imagenes/NGNIX-SERVER-SSL.png" alt="Descripción de la imagen" width="300"/>
 </p>
 
 ---
