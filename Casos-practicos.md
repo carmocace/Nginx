@@ -338,12 +338,11 @@ Configura una autentificación básica. Sólo pueden acceder **usuarios válidos
 1. Creamos un archivo .htpasswd para almacenar credenciales:
 
 ````bash
-sudo sh -c "echo -n 'usuario:' >> /etc/nginx/.htpasswd"
-sudo sh -c "openssl passwd -apr1 >> /etc/nginx/.htpasswd"
+sudo htpasswd -c /etc/nginx/.htpasswd usuario
 ````
 
 <p align="center">
-  <img src="/Imagenes/225.png" alt="Descripción de la imagen" width="500"/>
+  <img src="/Imagenes/260.png" alt="Descripción de la imagen" width="500"/>
 </p>
 
 - Comprobamos que se ha creado correctamente:
@@ -363,7 +362,7 @@ sudo nano /etc/nginx/sites-available/web1.conf
 ````
 
 <p align="center">
-  <img src="/Imagenes/235.png" alt="Descripción de la imagen" width="500"/>
+  <img src="/Imagenes/261.png" alt="Descripción de la imagen" width="500"/>
 </p>
 
 ````bash
@@ -396,7 +395,7 @@ sudo nano /var/www/web1/privado/index.html
 Cliente-red interna o externa: Accede a www.web1.org/privado y pide credenciales para entrar.
 
 <p align="center">
-  <img src="/Imagenes/231.png" alt="Descripción de la imagen" width="500"/>
+  <img src="/Imagenes/262.png" alt="Descripción de la imagen" width="500"/>
 </p>
 
 ---
@@ -411,7 +410,17 @@ Desde la red externa pide autorización y desde la red interna **NO**.
 
 Cliente-red interna: Accede a www.web1.org/privado **NO** pide credenciales para entrar.
 
+<p align="center">
+  <img src="/Imagenes/270.png" alt="Descripción de la imagen" width="500"/>
+</p>
+
+
 Cliente-red-externa: Accede a www.web1.org/privado **Sí** pide credenciales para entrar.
+
+<p align="center">
+  <img src="/Imagenes/280.png" alt="Descripción de la imagen" width="500"/>
+</p>
+
 
 ---
 ## **I) Seguridad.**
