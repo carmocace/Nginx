@@ -362,7 +362,7 @@ sudo nano /etc/nginx/sites-available/web1.conf
 ````
 
 <p align="center">
-  <img src="/Imagenes/261.png" alt="Descripción de la imagen" width="500"/>
+  <img src="/Imagenes/261.png" alt="Descripción de la imagen" width="400"/>
 </p>
 
 ````bash
@@ -370,7 +370,7 @@ sudo systemctl reload nginx
 ````
 
 <p align="center">
-  <img src="/Imagenes/228.png" alt="Descripción de la imagen" width="500"/>
+  <img src="/Imagenes/228.png" alt="Descripción de la imagen" width="400"/>
 </p>
 
 3. Creamos el directorio **/privado**:
@@ -383,11 +383,11 @@ sudo nano /var/www/web1/privado/index.html
 ````
 
 <p align="center">
-  <img src="/Imagenes/229.png" alt="Descripción de la imagen" width="500"/>
+  <img src="/Imagenes/229.png" alt="Descripción de la imagen" width="400"/>
 </p>
 
 <p align="center">
-  <img src="/Imagenes/230.png" alt="Descripción de la imagen" width="500"/>
+  <img src="/Imagenes/230.png" alt="Descripción de la imagen" width="400"/>
 </p>
 
 #### **Comprobación:** 
@@ -395,7 +395,7 @@ sudo nano /var/www/web1/privado/index.html
 Cliente-red interna o externa: Accede a www.web1.org/privado y pide credenciales para entrar.
 
 <p align="center">
-  <img src="/Imagenes/262.png" alt="Descripción de la imagen" width="500"/>
+  <img src="/Imagenes/262.png" alt="Descripción de la imagen" width="400"/>
 </p>
 
 ---
@@ -411,14 +411,14 @@ Desde la red externa pide autorización y desde la red interna **NO**.
 Cliente-red interna: Accede a www.web1.org/privado **NO** pide credenciales para entrar.
 
 <p align="center">
-  <img src="/Imagenes/270.png" alt="Descripción de la imagen" width="500"/>
+  <img src="/Imagenes/270.png" alt="Descripción de la imagen" width="400"/>
 </p>
 
 
 Cliente-red-externa: Accede a www.web1.org/privado **Sí** pide credenciales para entrar.
 
 <p align="center">
-  <img src="/Imagenes/280.png" alt="Descripción de la imagen" width="500"/>
+  <img src="/Imagenes/280.png" alt="Descripción de la imagen" width="400"/>
 </p>
 
 
@@ -427,13 +427,40 @@ Cliente-red-externa: Accede a www.web1.org/privado **Sí** pide credenciales par
 
 ---
 <p align="center">
-  <img src="/Imagenes/NGNIX-SERVER-SSL.png" alt="Descripción de la imagen" width="500"/>
-</p> 
+  <img src="/Imagenes/NGNIX-SERVER-SSL.png" alt="Descripción de la imagen" width="400"/>
+</p>
 
-Configura el sitio virtual www.web1.org para que el acceso sea seguro.
+---
+Configuración del sitio virtual www.web1.org para que el acceso sea seguro.
 
+- Generamos un **certificado autofirmado** 
+
+````bash
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/selfsigned.key -out /etc/ssl/certs/selfsigned.crt
+````
+---
+<p align="center">
+  <img src="/Imagenes/290.png" alt="Descripción de la imagen" width="300"/>
+</p>
+
+---
+- Editamos el archivo /etc/nginx/sites-avalaible/web1
+
+````bash
+nano /etc/nginx/sites-avalaible/web1
+````
+
+<p align="center">
+  <img src="/Imagenes/291.png" alt="Descripción de la imagen" width="300"/>
+</p>
+
+---
 #### **Comprobación:** 
 Cliente-red interna o externa: Accede a https://www.web1.org/
+
+<p align="center">
+  <img src="/Imagenes/292.png" alt="Descripción de la imagen" width="300"/>
+</p>
 
 ---
 <p align="center">
