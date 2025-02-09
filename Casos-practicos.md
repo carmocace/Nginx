@@ -468,5 +468,5 @@ Cliente-red interna o externa: Accede a https://www.web1.org/
 </p> 
 
 ---
-- Para realizar este Trabajo hemos investigado en internet, para consultar o ampliar la información, la hemos obtenido de las siguientes [**Direcciones Web**](Referencias.md).
+- Para realizar este Trabajo hemos investigado en internet. Para consultar o ampliar la información, la hemos obtenido de las siguientes [**Direcciones Webs**](Referencias.md).
 ---
